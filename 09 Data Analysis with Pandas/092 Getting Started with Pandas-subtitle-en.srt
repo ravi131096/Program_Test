@@ -1,0 +1,416 @@
+1
+00:00:00,660 --> 00:00:05,220
+Great again Pandas is a library that provides data structures
+
+2
+00:00:05,240 --> 00:00:08,080
+and data analysis tools in Python.
+
+3
+00:00:08,520 --> 00:00:15,270
+So in this lecture you'll see what I mean with data structures and data analysis so you'll see the main Pandas
+
+4
+00:00:15,330 --> 00:00:22,260
+objects which is a structure that contains the data and youll see thats how we get data from this structure and
+
+5
+00:00:22,260 --> 00:00:23,850
+analyze them.
+
+6
+00:00:23,910 --> 00:00:32,050
+So Ill open a simple command line. For now well use like Python which is great for data analysis
+
+7
+00:00:32,240 --> 00:00:34,040
+and working with data.
+
+8
+00:00:34,740 --> 00:00:41,080
+But even better is Jupiter notebook. Jupiter notebook is like a python shell.
+
+9
+00:00:41,490 --> 00:00:48,750
+It's actually a combination of a python shell and a python editor and it's a browser based tool where
+
+10
+00:00:48,750 --> 00:00:55,070
+you can write Python code and it's very efficient so it really boosts your productivity.
+
+11
+00:00:55,770 --> 00:01:01,470
+But for this lecture I want to start with simple things so one step at af time and Ill introduce
+
+12
+00:01:01,470 --> 00:01:08,040
+you to Pandas using iPython only and then in the next lecture I'll show you how to set up a Jupiter
+
+13
+00:01:08,070 --> 00:01:12,000
+Notebook previously known as the iPython Notebook.
+
+14
+00:01:12,300 --> 00:01:16,640
+So you'll set up Jupiter and I'll show you how to work with Jupiter.
+
+15
+00:01:16,980 --> 00:01:24,090
+So for now let's go ahead and use the plain iPython console. Import Pandas and normally the
+
+16
+00:01:24,090 --> 00:01:27,170
+first thing you do is you want to import some data.
+
+17
+00:01:27,320 --> 00:01:33,690
+Let's say from a CSV file or from a text file or even an excel file or JSON or other formats
+
+18
+00:01:34,320 --> 00:01:35,800
+which we'll be covering later.
+
+19
+00:01:35,910 --> 00:01:39,810
+But there are also other ways to create a Pandas data structure.
+
+20
+00:01:39,900 --> 00:01:44,820
+And the first thing you should know is that this data structure that I'm talking about is called a data
+
+21
+00:01:44,830 --> 00:01:45,370
+frame.
+
+22
+00:01:45,450 --> 00:01:52,020
+So that's a special object that will hold the data and you can create one. You can store a data frame
+
+23
+00:01:52,110 --> 00:01:53,160
+in a variable.
+
+24
+00:01:53,310 --> 00:01:58,930
+Let's say dF1 Pandas data frame.
+
+25
+00:01:59,190 --> 00:02:04,270
+So I'm creating a data frame manually passing values manually via Python.
+
+26
+00:02:04,500 --> 00:02:10,950
+Normally you want to use other files like I mentioned. So data frame and I now think of a bit of frame
+
+27
+00:02:10,970 --> 00:02:12,210
+Ill think of the data frame as a table.
+
+28
+00:02:12,240 --> 00:02:21,520
+So you may want to pass a list or lists where each list will be a row of that table.
+
+29
+00:02:21,540 --> 00:02:32,940
+So let's pass some data like 2 4 6 and 10 20 30. You execute that and that was successful because you didn't get
+
+30
+00:02:32,940 --> 00:02:34,700
+an error. DF1.
+
+31
+00:02:34,700 --> 00:02:37,020
+And here is the data frame.
+
+32
+00:02:37,050 --> 00:02:48,600
+So 2 4 6 is the first row 10 20 30 is the second row. This 0 1 2 are the names of the columns and these
+
+33
+00:02:48,600 --> 00:02:50,150
+are referred to as indexes.
+
+34
+00:02:50,160 --> 00:02:52,890
+So 0 1 here are indexes for the rows.
+
+35
+00:02:52,920 --> 00:02:55,710
+And these here are the column names.
+
+36
+00:02:55,710 --> 00:03:02,160
+The beauty of Pandas is that you can also have your own column names if you like.
+
+37
+00:03:02,200 --> 00:03:09,930
+So I'm going to call this expression again and I want to pass here a parameter called columns and that
+
+38
+00:03:09,960 --> 00:03:17,710
+expects a list of names which has to have the same number of items with a number of columns that
+
+39
+00:03:17,710 --> 00:03:18,860
+your data frame has.
+
+40
+00:03:18,870 --> 00:03:25,080
+So if you pass at least three items you want to pass three columns here as well.
+
+41
+00:03:25,080 --> 00:03:36,460
+Let's say price something random, age and value. You execute that and let me expand this DF1.
+
+42
+00:03:36,460 --> 00:03:39,860
+This time you see that you have your own column names there.
+
+43
+00:03:40,080 --> 00:03:48,360
+Now similarly you can pass custom names for indexes as well by passing in index ass parameter and then
+
+44
+00:03:48,760 --> 00:03:53,880
+youd want to pass at list with two items because we have two rows only.
+
+45
+00:03:54,740 --> 00:04:00,550
+Let's say first second DF1 and you have got some indexes.
+
+46
+00:04:00,570 --> 00:04:07,890
+However normally you won't have to pass costume indexes. Data normally have a defined number of columns
+
+47
+00:04:07,920 --> 00:04:12,770
+but through rows you may have hundreds or thousands of rows or millions there.
+
+48
+00:04:12,840 --> 00:04:20,160
+So really don't want to mess up with index names. However the feature is there in special cases.
+
+49
+00:04:20,370 --> 00:04:24,970
+So there's one way to create a Pandas data frame and you also have other ways of as well
+
+50
+00:04:28,320 --> 00:04:29,670
+which are not very common to use.
+
+51
+00:04:29,670 --> 00:04:32,030
+But I just you wanted to know that they are there.
+
+52
+00:04:32,040 --> 00:04:38,970
+So again you pass al list here and then what you could do is you would pass two dictionaries inside
+
+53
+00:04:38,970 --> 00:04:43,610
+that list so you can see the similarity.
+
+54
+00:04:43,650 --> 00:04:46,640
+Here we use a list of list.
+
+55
+00:04:46,650 --> 00:04:51,780
+Here we are also passing a list object but it's a list of dictionaries.
+
+56
+00:04:51,990 --> 00:04:58,790
+And I know what you could do here is you could pass the values of keys and values for a dictionary and
+
+57
+00:04:58,800 --> 00:05:00,590
+here as well.
+
+58
+00:05:01,060 --> 00:05:04,680
+So lets say a name, John.
+
+59
+00:05:07,260 --> 00:05:07,680
+Name
+
+60
+00:05:10,540 --> 00:05:12,080
+Jack.
+
+61
+00:05:12,180 --> 00:05:14,010
+Execute that. DF2.
+
+62
+00:05:14,050 --> 00:05:14,520
+And yeah.
+
+63
+00:05:14,580 --> 00:05:17,360
+This is yet another data frame.
+
+64
+00:05:17,460 --> 00:05:24,960
+If you wanted to have more columns there such as surname you would want to add here another key and
+
+65
+00:05:24,960 --> 00:05:28,170
+a value for the dictionary say something like
+
+66
+00:05:31,970 --> 00:05:33,340
+Surname.
+
+67
+00:05:33,450 --> 00:05:44,850
+And now if you execute that and DF2 youll get the surname column added there but for Jack you
+
+68
+00:05:44,850 --> 00:05:49,380
+get none because you didn't pass a surname in the dictionary.
+
+69
+00:05:49,380 --> 00:05:50,760
+In the second dictionary.
+
+70
+00:05:50,760 --> 00:05:56,170
+So if you do the same for Jack if you pass the surname you get the value in here.
+
+71
+00:05:56,280 --> 00:06:01,150
+So those are two basic ways to build data frames on the fly.
+
+72
+00:06:01,680 --> 00:06:09,650
+And as I said normally these values will come out of files of CSV files, Excel files etc.
+
+73
+00:06:09,870 --> 00:06:15,030
+I will do that throughout the next lectures and one more thing I wanted you to know.
+
+74
+00:06:15,050 --> 00:06:16,750
+So this is a this is a data structure.
+
+75
+00:06:16,850 --> 00:06:20,200
+And now what data analysis means is
+
+76
+00:06:20,600 --> 00:06:24,790
+from all of these data structures you want to get out information.
+
+77
+00:06:24,910 --> 00:06:31,430
+Sue you may want to extract for instance the average of all these values.
+
+78
+00:06:31,950 --> 00:06:35,220
+So 2 4 6 10 20 30.
+
+79
+00:06:35,310 --> 00:06:42,180
+So here we enter the face of data analysis and the approach to do that is you know these data frame object
+
+80
+00:06:42,180 --> 00:06:47,610
+now which you can see the type DF1.
+
+81
+00:06:48,540 --> 00:06:51,750
+So it's a data frame of Pandas.
+
+82
+00:06:51,750 --> 00:06:55,650
+Now this data frame object has methods attached to it.
+
+83
+00:06:55,830 --> 00:07:05,800
+If you do dir you see that it has quite a lot of methods that you can apply to it.
+
+84
+00:07:06,180 --> 00:07:10,120
+Let's locate the mean methods there.
+
+85
+00:07:10,160 --> 00:07:11,120
+Here its mean.
+
+86
+00:07:11,280 --> 00:07:19,920
+So what you could do is you point to DF1 and then mean and the brackets and you get the mean of all the
+
+87
+00:07:19,920 --> 00:07:20,590
+columns.
+
+88
+00:07:20,730 --> 00:07:24,770
+And if you one the mean of the entire data frame you can apply again
+
+89
+00:07:24,780 --> 00:07:26,690
+the mean method after that.
+
+90
+00:07:26,730 --> 00:07:38,790
+So what this does is it applies the mean method over these series here. So these type
+
+91
+00:07:39,900 --> 00:07:46,840
+It's a Pandas series object and series have more or less the same methods that you can apply to a data frame
+
+92
+00:07:46,870 --> 00:07:47,780
+.
+
+93
+00:07:48,000 --> 00:07:57,090
+So Df1 and DF1.Price and you get the series of the price column.
+
+94
+00:07:57,300 --> 00:08:01,660
+So that is also if you check with type.
+
+95
+00:08:01,750 --> 00:08:04,810
+That is also a Pandas series.
+
+96
+00:08:04,950 --> 00:08:14,280
+So a data frame is made of series and of course you can apply the mean method to Price as well.
+
+97
+00:08:14,280 --> 00:08:17,590
+Similarly you can apply other methods as well that are available there.
+
+98
+00:08:17,850 --> 00:08:20,420
+So max and you get the maximum value.
+
+99
+00:08:21,030 --> 00:08:24,950
+Yeah that's about the introduction to Pandas.
+
+100
+00:08:25,000 --> 00:08:27,310
+In the next lecture you'll learn about Jupiter.
+
+101
+00:08:27,600 --> 00:08:29,430
+It's very pleasant to work with Jupiter.
+
+102
+00:08:29,580 --> 00:08:30,680
+So don't miss that.
+
+103
+00:08:30,730 --> 00:08:36,340
+And then we will go have an open date frames, create frames out of files.
+
+104
+00:08:36,390 --> 00:08:37,650
+So I'll see you later.
+

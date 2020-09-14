@@ -1,0 +1,428 @@
+1
+00:00:00,600 --> 00:00:06,840
+Well in this lecture I'll show you how to set up the Jupiter Notebook or Jupiter for short and also
+
+2
+00:00:06,840 --> 00:00:08,070
+how to use it.
+
+3
+00:00:08,700 --> 00:00:15,240
+So far you've worked both with Python and an iPython interactive shell but also you work with
+
+4
+00:00:15,510 --> 00:00:18,380
+an editor such as Atom.
+
+5
+00:00:18,990 --> 00:00:27,870
+Sometimes you may have the need for a hybrid between an interactive shell and an editor. When you
+
+6
+00:00:27,870 --> 00:00:35,160
+want to test things out but you also want to just save your blocks of code that you were writing because
+
+7
+00:00:35,160 --> 00:00:38,880
+an interactive shell is great for testing things quickly.
+
+8
+00:00:39,410 --> 00:00:45,930
+But you cant save the code and the editor is good for saving the code but it's not great for testing
+
+9
+00:00:45,930 --> 00:00:46,990
+things.
+
+10
+00:00:47,190 --> 00:00:54,330
+But I can tell you were that such a hybrid tool is that it's called Jupiter Notebook and that is an
+
+11
+00:00:54,330 --> 00:00:57,430
+amazing tool that will boost your productivity.
+
+12
+00:00:57,510 --> 00:01:04,110
+And Jupiter is especially good when you're working with data as it's a great environment to explore
+
+13
+00:01:04,120 --> 00:01:08,190
+data and you'll see its usefulness in just a bit.
+
+14
+00:01:08,220 --> 00:01:14,130
+Of course you still want to use editor such as Atom when you're working with multiple Python scripts
+
+15
+00:01:14,160 --> 00:01:20,450
+that interact with each other. That's the case of a web application
+
+16
+00:01:20,450 --> 00:01:23,080
+for example when you're developing web applications.
+
+17
+00:01:23,250 --> 00:01:28,650
+You'll have to deal with multiple Python scripts and also HTML files CSS and other files
+
+18
+00:01:28,680 --> 00:01:29,870
+as well.
+
+19
+00:01:30,000 --> 00:01:35,130
+We well build a web application later of course and you'll see how Atom is good for that.
+
+20
+00:01:35,910 --> 00:01:38,490
+But for data use Jupiter.
+
+21
+00:01:38,590 --> 00:01:41,640
+So Jupiter, let's see how to install it.
+
+22
+00:01:42,000 --> 00:01:49,530
+Well we can go to the instalation so install and you can go through these instructions.
+
+23
+00:01:49,950 --> 00:01:56,880
+But instead of going for this advice you actually to use your command line to install Jupiter.
+
+24
+00:01:56,880 --> 00:02:03,720
+Typing pip install Jupiter.
+
+25
+00:02:03,990 --> 00:02:12,490
+So that will download Jupiter and it will install it in your system. And then to start a Jupiter session
+
+26
+00:02:12,510 --> 00:02:16,100
+a good practice is to go to a folder.
+
+27
+00:02:17,490 --> 00:02:30,250
+Let's say test 3 and here you can open a command prompt and then you type Jupiter Notebook
+
+28
+00:02:32,470 --> 00:02:33,830
+That will open
+
+29
+00:02:33,970 --> 00:02:39,670
+a Jupiter session in the browser. So the Jupiter an old book is actually a browser notebook.
+
+30
+00:02:39,870 --> 00:02:46,110
+The reason I opened the Jupiter notebook in the command line was that at least we know so when you do
+
+31
+00:02:46,110 --> 00:02:51,750
+shift and then right click on the folder your command prompt is opened in the current folder.
+
+32
+00:02:51,750 --> 00:02:52,880
+So in this one here.
+
+33
+00:02:53,310 --> 00:03:00,470
+And then when you create a notebook file now every file will be saved in this directory here.
+
+34
+00:03:00,990 --> 00:03:08,180
+Alternatively you can open your command prompt everywhere you want and then you can CD to the folder where
+
+35
+00:03:08,190 --> 00:03:11,250
+you want to save your Jupiter Notebooks.
+
+36
+00:03:11,250 --> 00:03:11,640
+All right.
+
+37
+00:03:11,640 --> 00:03:13,290
+Now we don't have anything here.
+
+38
+00:03:13,430 --> 00:03:23,070
+So what you can do is create a notebook and we installed Jupiter as Python Library so under notebooks
+
+39
+00:03:23,070 --> 00:03:25,360
+we have Python 3 available.
+
+40
+00:03:25,680 --> 00:03:33,430
+So the kernel with the Python 3 if you have associated all the languages here you'll see them under
+
+41
+00:03:33,450 --> 00:03:35,780
+here on their notebooks.
+
+42
+00:03:35,870 --> 00:03:39,150
+So this is an empty notebook.
+
+43
+00:03:40,140 --> 00:03:46,460
+This is the name of a notebook and you can change it to let's say testing.
+
+44
+00:03:47,590 --> 00:03:48,660
+Press Ok.
+
+45
+00:03:49,380 --> 00:03:57,240
+And if you go to the folder you'll see that a file with testing name and iPython notebook extension
+
+46
+00:03:57,240 --> 00:04:03,450
+was created so that it's created automatically every time you type something you do some changes or
+
+47
+00:04:03,450 --> 00:04:04,380
+something.
+
+48
+00:04:04,380 --> 00:04:11,370
+Now let me show you how you can work with the iPython Notebook so you can consider every cell of This cell
+
+49
+00:04:11,640 --> 00:04:16,720
+and you can consider every cell as a line in you know normal Python shell.
+
+50
+00:04:16,890 --> 00:04:23,980
+But here in this trial you can actually write multiple lines of code let's say print 1 and then
+
+51
+00:04:24,330 --> 00:04:27,640
+if you don't want to execute this right away you can press enter.
+
+52
+00:04:27,700 --> 00:04:33,270
+So we enter you enter a new line in the cell and then print 2 and so on.
+
+53
+00:04:33,270 --> 00:04:41,330
+And if you want to execute the cell now you can't press Control Enter and you get the output.
+
+54
+00:04:41,340 --> 00:04:46,630
+Now if you want to create a new cell ALT enter it would do that.
+
+55
+00:04:47,040 --> 00:04:51,640
+And here you can write another block of code.
+
+56
+00:04:51,690 --> 00:04:55,310
+With Enter you go to the next line and so on.
+
+57
+00:04:55,350 --> 00:05:00,150
+And if you want to go to the next cell right away.
+
+58
+00:05:00,420 --> 00:05:06,410
+So before we pressed Control Enter now you can press Shift Enter and you go to the next cell automatically.
+
+59
+00:05:06,770 --> 00:05:08,030
+With Shift Enter
+
+60
+00:05:08,040 --> 00:05:11,710
+you also execute the cell what are you working on.
+
+61
+00:05:11,890 --> 00:05:17,310
+You're going create new cells with ALT Enter and you can deal with them by pressing first you press
+
+62
+00:05:17,760 --> 00:05:23,420
+Escape and then you press dd 2 times dd again.
+
+63
+00:05:23,490 --> 00:05:25,220
+So it's quite flexible.
+
+64
+00:05:25,610 --> 00:05:28,890
+Something you shouldn't notice is that we have two modes.
+
+65
+00:05:28,890 --> 00:05:31,650
+Basically we have the command mode.
+
+66
+00:05:31,650 --> 00:05:39,570
+So when you are in the common mode you see a gray rectangle around the cell and when you are to go to
+
+67
+00:05:39,570 --> 00:05:41,820
+the edit more then you press Enter.
+
+68
+00:05:41,820 --> 00:05:47,560
+So while you are focused on the current cell you press Eneter and then you edit the cell.
+
+69
+00:05:48,320 --> 00:05:54,100
+So in edit mode when you type things you're inserting text in the cell.
+
+70
+00:05:54,140 --> 00:05:59,140
+Youre inserting code is in the cell. Escape and common mode.
+
+71
+00:05:59,360 --> 00:06:06,180
+Dd and you delete the cell. ALT Enter and you enter a new cell.
+
+72
+00:06:06,270 --> 00:06:10,380
+So these are the most used short cuts, keyboard shortcuts.
+
+73
+00:06:10,540 --> 00:06:17,100
+But if you want to know more shortcuts you can go to Help and then Keyboard Shortcuts and then you see
+
+74
+00:06:17,130 --> 00:06:18,880
+a list here.
+
+75
+00:06:20,250 --> 00:06:23,220
+But these are good to get started.
+
+76
+00:06:23,220 --> 00:06:29,220
+When you're done with this you can just close the tab and you can also close the directory tree here
+
+77
+00:06:29,240 --> 00:06:29,490
+.
+
+78
+00:06:29,760 --> 00:06:34,720
+So notice that Jupiter actually opens in a local host session.
+
+79
+00:06:35,030 --> 00:06:43,320
+And if you want to open again your notebook you can go here again and go to Open Command Window
+
+80
+00:06:43,320 --> 00:06:49,180
+here and Jupiter Notebook.
+
+81
+00:06:50,340 --> 00:06:56,270
+And here is the file and it's just as we left it.
+
+82
+00:06:56,280 --> 00:07:02,950
+Now a Jupiter notebook is best used for doing explorations and especially data explorations.
+
+83
+00:07:03,150 --> 00:07:09,540
+So if you're working with data analysis or data visualizations the Jupiter Notebook
+
+84
+00:07:09,540 --> 00:07:11,440
+is perfect to use.
+
+85
+00:07:11,670 --> 00:07:18,480
+You can use the Jupiter Notebook for example to load a table of data in the session.
+
+86
+00:07:18,560 --> 00:07:21,420
+And for that you'd use Pandas.
+
+87
+00:07:22,230 --> 00:07:27,930
+So you import the library, you press Enter or Shift Enter to go to the next cell and you press Enter
+
+88
+00:07:27,930 --> 00:07:29,720
+again to write something.
+
+89
+00:07:29,850 --> 00:07:33,830
+So let's say df equals to Pandas.readcsv.
+
+90
+00:07:37,300 --> 00:07:47,100
+And I have a CSV file somewhere in my system.
+
+91
+00:07:47,100 --> 00:07:50,770
+Press Enter and Wow.
+
+92
+00:07:52,110 --> 00:07:59,160
+So you get a nice HTML table which was loaded from the CSV file and you can also plot graphs in the Jupiter
+
+93
+00:07:59,300 --> 00:07:59,960
+Notebook.
+
+94
+00:08:00,030 --> 00:08:03,130
+So that's also something you're learning in the course.
+
+95
+00:08:03,510 --> 00:08:06,360
+So data analysis and visualizations.
+
+96
+00:08:06,360 --> 00:08:12,840
+You can also use the Jupiter Notebook for web scrapping and that is very convenient because you
+
+97
+00:08:12,960 --> 00:08:20,310
+have these blocks of code and then the you have to continuously tweak the code so you may want to change
+
+98
+00:08:20,310 --> 00:08:24,550
+something here and then you get a nice display.
+
+99
+00:08:24,700 --> 00:08:31,020
+Not this one exactly because this is a messed up stream but this one for instance you have a slider
+
+100
+00:08:31,020 --> 00:08:40,260
+here so you can scroll up and down you know inside a separate window that doesn't affect you or general
+
+101
+00:08:40,560 --> 00:08:41,760
+your main window.
+
+102
+00:08:41,790 --> 00:08:48,540
+So I hope you have gotten a good idea of the Jupiter Notebook. Just take a note of the shortcuts
+
+103
+00:08:48,540 --> 00:08:51,120
+all the keyboard shortcuts to execute
+
+104
+00:08:51,120 --> 00:08:57,790
+code the edits and the command mode you know. Enter Escape and Enter again and so on and so forth.
+
+105
+00:08:57,960 --> 00:09:00,390
+And you just practice them a little bit.
+
+106
+00:09:00,420 --> 00:09:02,620
+You'll get used with Jupiter
+
+107
+00:09:02,820 --> 00:09:05,670
+very quickly. See where the next lecture.
+

@@ -1,0 +1,584 @@
+1
+00:00:00,590 --> 00:00:07,460
+Great, now that's how you have a basic understanding of Pandas and you know how to use the Jupiter Notebooks
+
+2
+00:00:07,830 --> 00:00:16,380
+we can go ahead and learn how to load various kinds of files in Python using Pandas and Jupiter.
+
+3
+00:00:16,380 --> 00:00:23,290
+So I've got five files here and they contain exactly the same data sets.
+
+4
+00:00:23,430 --> 00:00:31,560
+This is a text version or let me open of the Excel version that will show a pretty overview of data as you
+
+5
+00:00:31,560 --> 00:00:32,020
+can see.
+
+6
+00:00:32,130 --> 00:00:36,890
+So we've got seven lines of code including the header.
+
+7
+00:00:37,030 --> 00:00:40,410
+We have also seven columns.
+
+8
+00:00:40,410 --> 00:00:50,550
+So it's just some basic data of supermarkets. The address, city, state country and the name of the supermarket
+
+9
+00:00:50,550 --> 00:00:54,270
+and number of employees.
+
+10
+00:00:54,590 --> 00:00:58,980
+And similarly we have exactly the same data but in a different format.
+
+11
+00:00:58,980 --> 00:01:03,780
+So we have CSV and CSV means comma separated values.
+
+12
+00:01:03,870 --> 00:01:11,640
+So it's basically a text file where the values, the columns are separated by commas as you can see
+
+13
+00:01:11,640 --> 00:01:11,970
+here.
+
+14
+00:01:11,970 --> 00:01:19,080
+So every column is supported by a comma but it has a CSV extension and it can be open with Excel.
+
+15
+00:01:19,080 --> 00:01:19,560
+.
+
+16
+00:01:19,590 --> 00:01:24,460
+So if I open this now you'll see the same data so that you saw in Excel file.
+
+17
+00:01:24,510 --> 00:01:29,630
+We also have the same data separated by say my columns.
+
+18
+00:01:29,670 --> 00:01:38,130
+As you can see in here. And yeah if you're working with data you're probably familiar with this
+
+19
+00:01:38,130 --> 00:01:38,930
+kind of files.
+
+20
+00:01:39,330 --> 00:01:46,620
+So this is how to store data you need to have some conventions and using such convention then you
+
+21
+00:01:46,620 --> 00:01:50,720
+use other programs such as Python to load these data.
+
+22
+00:01:50,880 --> 00:02:00,030
+So when you load a CSV file Python knows that the values will be separated by commas and it knows how
+
+23
+00:02:00,030 --> 00:02:01,200
+to separate them.
+
+24
+00:02:01,200 --> 00:02:04,430
+It knows how to extract values.
+
+25
+00:02:04,710 --> 00:02:07,150
+So we will open all of these one by one.
+
+26
+00:02:07,170 --> 00:02:08,670
+We also have adjacent file
+
+27
+00:02:12,540 --> 00:02:18,870
+which is yet another format to store data and looks like a python dictionary actually.
+
+28
+00:02:19,170 --> 00:02:23,250
+So we will learn how to convert them to Pandas data frames as well.
+
+29
+00:02:23,520 --> 00:02:27,040
+So all these will be converted to Pandas data frames.
+
+30
+00:02:27,200 --> 00:02:37,850
+Yeah go ahead and start Jupiter. Jupiter Notebook. Here are my files.
+
+31
+00:02:37,920 --> 00:02:39,660
+I'll go ahead and create a new Jupiter Notebook for Python 3.
+
+32
+00:02:39,810 --> 00:02:46,180
+Before I go ahead and load those files in Python there is a trick I do usually, I import os
+
+33
+00:02:46,610 --> 00:02:50,560
+and then os.listdir and ALT Enter.
+
+34
+00:02:50,610 --> 00:02:52,970
+Execute that. You go to the next line.
+
+35
+00:02:52,990 --> 00:02:59,010
+And what you get is you get a list of files and folders as well of file names that you have in
+
+36
+00:02:59,010 --> 00:03:00,470
+the current directory.
+
+37
+00:03:00,480 --> 00:03:04,080
+So no I don't have to switch to my folder to look at the names.
+
+38
+00:03:04,110 --> 00:03:05,560
+I have everything in here.
+
+39
+00:03:05,610 --> 00:03:12,580
+Now I can go and import Pandas and let's start loading these files one by one.
+
+40
+00:03:13,110 --> 00:03:25,380
+Let's say df1 so dataframe one that would be equal to pandas.read_csv and then you have to pass
+
+41
+00:03:26,250 --> 00:03:32,750
+the name of the file that you want to open supermarkets.csv and just Enter.
+
+42
+00:03:33,080 --> 00:03:35,020
+Maybe you want to print that out. Df there.
+
+43
+00:03:35,060 --> 00:03:39,420
+We got an error.
+
+44
+00:03:39,420 --> 00:03:46,260
+Let's see why. It says supermakets does not exist.
+
+45
+00:03:46,260 --> 00:03:47,940
+Yeah I forgot
+
+46
+00:03:48,560 --> 00:03:55,550
+an R here just there. This time it worked.
+
+47
+00:03:56,310 --> 00:04:00,710
+Dd to delete that cell and what we got here is
+
+48
+00:04:00,780 --> 00:04:03,720
+So we loaded the first and then we printed that out.
+
+49
+00:04:03,720 --> 00:04:07,210
+So we got this table, nice table in there.
+
+50
+00:04:07,620 --> 00:04:11,120
+That's how easy it is to load data from a CSV file.
+
+51
+00:04:11,190 --> 00:04:17,480
+Now if you see this, this is in bold the first row there that's a special row.
+
+52
+00:04:17,490 --> 00:04:25,530
+So that's a header of your data frame and Python Pandas was able to automatically recognize the header
+
+53
+00:04:25,530 --> 00:04:26,800
+from your file.
+
+54
+00:04:26,910 --> 00:04:33,920
+So this method, the Read CSV Method that has a header parameter that is set to True by default.
+
+55
+00:04:34,320 --> 00:04:36,260
+But if you want you can set it to none.
+
+56
+00:04:36,360 --> 00:04:39,590
+And that's how you tell Python that my data don't have a header.
+
+57
+00:04:39,750 --> 00:04:47,350
+So what Python will do is it will treat your first row of your file as a simple row
+
+58
+00:04:47,370 --> 00:04:54,870
+so it will just dump it amongst the other rows and what it will do it will create a default header
+
+59
+00:04:54,870 --> 00:04:57,760
+for your data frame with numbers.
+
+60
+00:04:57,810 --> 00:04:59,530
+So I'm going to remove this
+
+61
+00:04:59,670 --> 00:05:06,410
+and leave it as it was. Notice that we also have an ID column there which if you want you can use it
+
+62
+00:05:06,430 --> 00:05:08,950
+as an index for your data.
+
+63
+00:05:10,040 --> 00:05:19,940
+So if you want to use IDs and index instead of letting Python define your index what you do is you
+
+64
+00:05:20,720 --> 00:05:29,060
+apply the Set Index Method to your data frame and then you say ID there Execute.
+
+65
+00:05:29,060 --> 00:05:30,280
+Well Python will do it.
+
+66
+00:05:30,410 --> 00:05:36,780
+It will search for the column with name ID and you will set it as an index. Df1.shape if you
+
+67
+00:05:36,770 --> 00:05:39,520
+want to know the shape of your data frame.
+
+68
+00:05:39,530 --> 00:05:47,280
+So you get 6 7 meaning that you got sixrows and seven columns including the ID column.
+
+69
+00:05:47,810 --> 00:05:50,240
+And you know that's how you load CSV files.
+
+70
+00:05:50,250 --> 00:05:55,390
+Now let's go ahead and load df2.pandas.
+
+71
+00:05:55,640 --> 00:05:56,250
+What's next?
+
+72
+00:05:56,270 --> 00:05:58,290
+Well next is JSON.
+
+73
+00:05:58,940 --> 00:06:11,300
+So instead of doing read_csv we you want to do read_json and then you just pass the name of your JSON file
+
+74
+00:06:11,530 --> 00:06:21,550
+including the extension of course. I executed that. I forgot to print that out. Si this a JSON file
+
+75
+00:06:21,560 --> 00:06:21,850
+.
+
+76
+00:06:21,940 --> 00:06:29,030
+And similarly if you want to you can set index to ID and execute again.
+
+77
+00:06:30,310 --> 00:06:32,020
+And ID set as 		an index.
+
+78
+00:06:32,120 --> 00:06:39,260
+Now you can also notice that the order of the columns is not the same as the previous CSV file that
+
+79
+00:06:39,320 --> 00:06:41,630
+we opened which is not a problem.
+
+80
+00:06:41,750 --> 00:06:44,780
+Every column has its own name its own identity.
+
+81
+00:06:44,780 --> 00:06:48,310
+So having call them of those in order it's not a problem.
+
+82
+00:06:48,810 --> 00:06:59,220
+And let's go ahead and load the xls file xlsx actually an Excel file.
+
+83
+00:07:00,410 --> 00:07:02,600
+So pandas.read_excel and
+
+84
+00:07:07,130 --> 00:07:09,470
+you pass the name of the Excel file.
+
+85
+00:07:09,500 --> 00:07:13,150
+Normally you should also pass another parameter here for Excel files.
+
+86
+00:07:13,380 --> 00:07:17,310
+Because you know Excel files might have multiple sheets inside them.
+
+87
+00:07:17,390 --> 00:07:25,020
+So you want to specify the sheet name which start from zero so you need to pass the index actually.
+
+88
+00:07:25,560 --> 00:07:32,190
+If you want the first sheet you want to pass 0 if you on the second sheet you want to press 1 and so
+
+89
+00:07:32,180 --> 00:07:32,500
+on.
+
+90
+00:07:32,510 --> 00:07:34,160
+So I'll pass zero there.
+
+91
+00:07:34,160 --> 00:07:41,880
+I had only one sheet in the Excel file. Df3 execute.
+
+92
+00:07:41,900 --> 00:07:45,940
+And yeah, we were able to successfully read the Excel file as well.
+
+93
+00:07:46,010 --> 00:07:48,470
+Let's move on with that txt file.
+
+94
+00:07:48,480 --> 00:07:52,970
+So it's supermarkets separated by commas.
+
+95
+00:07:53,030 --> 00:07:56,940
+So it's a little structure separated by commas. For that
+
+96
+00:07:56,940 --> 00:08:02,650
+So for the txt files separated by commas
+
+97
+00:08:03,680 --> 00:08:06,830
+again use a read_csv.
+
+98
+00:08:12,240 --> 00:08:14,670
+Just like that df4.
+
+99
+00:08:15,560 --> 00:08:20,510
+And here is the data frame. So this supermarkets.csv
+
+100
+00:08:20,520 --> 00:08:25,550
+actually some say it's a comma separated file but to be more accurate you would say are character
+
+101
+00:08:25,550 --> 00:08:28,840
+separated values. So C is for character.
+
+102
+00:08:29,380 --> 00:08:31,730
+And you know there might be different characters there.
+
+103
+00:08:31,860 --> 00:08:38,300
+In this case when you have commas as separators you don't have to pass any separator parameter here
+
+104
+00:08:39,050 --> 00:08:46,780
+but when you have other values as separators you will have to pass that. That is the next scenario.
+
+105
+00:08:46,910 --> 00:08:51,950
+So df5 pandas.read_csv.
+
+106
+00:08:52,590 --> 00:09:01,730
+So we're talking about supermarkets semi-colons or supermarkets_semi-colons.txt.
+
+107
+00:09:02,000 --> 00:09:08,360
+So let me try this.
+
+108
+00:09:08,420 --> 00:09:09,310
+as it is now.
+
+109
+00:09:09,380 --> 00:09:13,180
+So if I execute that Python will not be able to recognize the semi-colon there.
+
+110
+00:09:13,170 --> 00:09:15,650
+The reason for that is because
+
+111
+00:09:18,200 --> 00:09:23,540
+the separator parameter has a value of comma by default.
+
+112
+00:09:23,540 --> 00:09:30,990
+So you want to change that to your separator which is a semi-colon in this case. Execute. We've got
+
+113
+00:09:30,990 --> 00:09:31,480
+an error there.
+
+114
+00:09:31,590 --> 00:09:32,180
+Unexpected.
+
+115
+00:09:32,180 --> 00:09:33,610
+Argument separator.
+
+116
+00:09:33,650 --> 00:09:40,330
+So it seems like read_csv doesn't have a separated, separator parameter.
+
+117
+00:09:40,350 --> 00:09:53,820
+In that case you want to do to ask for help. So here is the parameters that you want to pass.
+
+118
+00:09:53,850 --> 00:09:59,270
+So it's actually a sep and you can see that the default value of sep is a comma.
+
+119
+00:09:59,880 --> 00:10:03,070
+So you close that and go to here.
+
+120
+00:10:03,340 --> 00:10:05,370
+Change that to sep execute.
+
+121
+00:10:05,380 --> 00:10:06,920
+And here is the data frame.
+
+122
+00:10:07,080 --> 00:10:07,560
+Great.
+
+123
+00:10:07,570 --> 00:10:09,630
+What's left to d? Yeah.
+
+124
+00:10:09,680 --> 00:10:11,300
+Well we consumed everything.
+
+125
+00:10:11,500 --> 00:10:14,590
+That's about reading local files.
+
+126
+00:10:14,690 --> 00:10:19,170
+Now Pandas also allows you to read online files directly from the web.
+
+127
+00:10:19,320 --> 00:10:31,610
+For instance here we have a CSV file in this website so I browsed to that and then it was
+
+128
+00:10:31,620 --> 00:10:32,410
+downloaded.
+
+129
+00:10:32,610 --> 00:10:39,620
+And if you want to you can go ahead and put that in your Jupiter folder and then open it as we did.
+
+130
+00:10:39,750 --> 00:10:52,090
+Or you can grab this URL go here say df6.read_csv and then pass the URL  just there.
+
+131
+00:10:53,080 --> 00:10:57,260
+Df6 to print that out.
+
+132
+00:10:57,330 --> 00:10:57,740
+Boom.
+
+133
+00:10:57,750 --> 00:10:59,530
+Here is the foil.
+
+134
+00:10:59,580 --> 00:11:06,650
+So is the same exactly the same CSV file that we opened earlier up but we were able to gather from
+
+135
+00:11:06,650 --> 00:11:07,660
+the web.
+
+136
+00:11:08,310 --> 00:11:11,270
+Similarly you can get all the files as well.
+
+137
+00:11:11,490 --> 00:11:15,810
+JSON. You can pass it as URL.
+
+138
+00:11:23,820 --> 00:11:26,780
+Just there and print that out.
+
+139
+00:11:27,330 --> 00:11:29,020
+And here is the file.
+
+140
+00:11:29,370 --> 00:11:32,950
+So this can be very useful when you want to automate things.
+
+141
+00:11:33,240 --> 00:11:39,030
+Let's say you have some data from a web site from a data provider or maybe you have multiple files
+
+142
+00:11:39,020 --> 00:11:45,710
+and you want to write a loop in Python that accesses these URLs and then it gets the data.
+
+143
+00:11:45,750 --> 00:11:48,750
+And also you then analyze the data and so on.
+
+144
+00:11:49,160 --> 00:11:54,700
+So yeah that's about loading a data in Python via Pandas and using Jupiter.
+
+145
+00:11:55,080 --> 00:12:01,430
+So I believe you find this very easy and yeah we'll move on and do some data analysis in the next lectures.
+
+146
+00:12:01,740 --> 00:12:02,850
+So I'll see you there.
+

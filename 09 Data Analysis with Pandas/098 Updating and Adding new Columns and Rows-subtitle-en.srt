@@ -1,0 +1,352 @@
+1
+00:00:01,230 --> 00:00:06,550
+Good we're continuing our series of lectures about manipulating Pandas data frames.
+
+2
+00:00:06,870 --> 00:00:12,030
+So you learned how to drop a row or column out of a data frame in the previous lecture.
+
+3
+00:00:12,030 --> 00:00:17,170
+Now let's see how we can add a column or row to a data frame.
+
+4
+00:00:17,670 --> 00:00:24,980
+So we have df7 here with Address as index column and this series of column labels.
+
+5
+00:00:25,070 --> 00:00:26,720
+Now just to clarify something.
+
+6
+00:00:27,030 --> 00:00:28,920
+I know this is difficult to wrap up your mind.
+
+7
+00:00:28,920 --> 00:00:32,530
+How will you be using these operations in real life?
+
+8
+00:00:32,580 --> 00:00:38,720
+So I just want you to know with the syntax of doing these operations and throughout the course you learn
+
+9
+00:00:38,790 --> 00:00:43,180
+how to actually put these into work with real life examples.
+
+10
+00:00:43,320 --> 00:00:44,840
+So don't worry about that.
+
+11
+00:00:45,130 --> 00:00:47,120
+And you know let's add a column there.
+
+12
+00:00:47,600 --> 00:00:55,790
+To that you'd want to say df and in square brackets you pass the name of the new column. Let's say Continent.
+
+13
+00:00:56,500 --> 00:00:58,610
+That would be equal to
+
+14
+00:00:58,610 --> 00:01:04,330
+You know now you would have to pass a list of values that you want to populate that column with.
+
+15
+00:01:04,350 --> 00:01:07,640
+Let's say North America.
+
+16
+00:01:08,040 --> 00:01:11,940
+Now if you execute that you'll get an error. Named df is not defined.
+
+17
+00:01:11,940 --> 00:01:14,740
+Actually I didn't mean this error.
+
+18
+00:01:14,850 --> 00:01:17,210
+This was another thing. You'll get this error.
+
+19
+00:01:17,460 --> 00:01:22,850
+So it says that the length of values does not match the length of index.
+
+20
+00:01:23,700 --> 00:01:33,300
+So the length of index is you know the length of the index is df7.index.
+
+21
+00:01:33,300 --> 00:01:34,520
+The length of your index is five.
+
+22
+00:01:34,680 --> 00:01:39,270
+But you're trying to pass there a list with a length of 1.
+
+23
+00:01:39,330 --> 00:01:41,210
+So you've got only one element there.
+
+24
+00:01:41,820 --> 00:01:48,270
+So the solution here is to pass a list with the exact number of items that you have in your table in
+
+25
+00:01:48,270 --> 00:01:49,860
+your data frame.
+
+26
+00:01:49,890 --> 00:01:52,850
+So we have five rows there five.
+
+27
+00:01:53,160 --> 00:01:58,630
+And you know you could add four or more items here in North America. North America etc.
+
+28
+00:01:58,800 --> 00:02:10,600
+Or you can do some fancy things in there. So you could say df7.shape and then zero times that. Execute.
+
+29
+00:02:10,870 --> 00:02:11,370
+Df7.
+
+30
+00:02:11,380 --> 00:02:13,010
+Print that out.
+
+31
+00:02:13,330 --> 00:02:14,840
+Here we have a new column.
+
+32
+00:02:15,150 --> 00:02:17,190
+So if you're confused with this shape.
+
+33
+00:02:17,310 --> 00:02:19,020
+Zero times North America.
+
+34
+00:02:19,410 --> 00:02:27,660
+Well what I did is you know df7.shape. What you get is 5,7 which means you have five rows and seven
+
+35
+00:02:27,660 --> 00:02:29,690
+columns.
+
+36
+00:02:29,690 --> 00:02:34,970
+Now what I want to get is the first item of that's tuple.
+
+37
+00:02:35,130 --> 00:02:42,190
+So I get the five by doing shape zero. With this I always make sure that I'm getting the number of the rows
+
+38
+00:02:42,230 --> 00:02:44,170
+that my data frame has.
+
+39
+00:02:44,880 --> 00:02:53,010
+And then when you multiply five by a list with one element you get a list with five elements.
+
+40
+00:02:53,700 --> 00:02:56,900
+America. Thats the idea.
+
+41
+00:02:57,030 --> 00:03:05,660
+Delete that and note this is actually an inplace operation so that will update your data frame and that
+
+42
+00:03:05,670 --> 00:03:07,370
+was about adding a new column.
+
+43
+00:03:07,370 --> 00:03:09,670
+And how about modifying a new column.
+
+44
+00:03:10,800 --> 00:03:13,800
+So modifying the continent column.
+
+45
+00:03:14,010 --> 00:03:23,280
+You know that could be something like country and you can also add some strings in there. Let's say plus
+
+46
+00:03:23,940 --> 00:03:28,140
+comma plus maybe another string.
+
+47
+00:03:28,490 --> 00:03:29,330
+North America.
+
+48
+00:03:32,100 --> 00:03:40,080
+Execute that. Prints out the data frame and see what we got.
+
+49
+00:03:40,080 --> 00:03:46,380
+So what we did here is we updated the Continent column by referring to an existing column which was
+
+50
+00:03:46,390 --> 00:03:47,670
+Country.
+
+51
+00:03:47,900 --> 00:03:55,170
+And then for each value of the country column we added so we concatenated the comma string which you can
+
+52
+00:03:55,170 --> 00:04:00,640
+see in here just after USA and we also added another string.
+
+53
+00:04:01,230 --> 00:04:06,100
+So North America. And this could also be another column if you liked.
+
+54
+00:04:06,330 --> 00:04:15,730
+So if you pass here let's say Employees you'd get 8 instead of the first North America and then 15
+
+55
+00:04:15,740 --> 00:04:16,530
+and so on.
+
+56
+00:04:16,590 --> 00:04:19,380
+So that's how you update a column.
+
+57
+00:04:19,500 --> 00:04:21,370
+How about adding a new row?
+
+58
+00:04:21,570 --> 00:04:25,650
+Well this can be a bit tricky but still understandable.
+
+59
+00:04:26,160 --> 00:04:32,460
+What you could do here because there is not an easy method to pass a row to a data frame
+
+60
+00:04:32,760 --> 00:04:37,640
+What you could do is you could say df7_t.
+
+61
+00:04:37,650 --> 00:04:45,010
+So I'm creating a new variable that would be equal to df7.t.
+
+62
+00:04:45,030 --> 00:04:52,000
+So T is actually is a method that what it does is it transposes your data frame. With transposition
+
+63
+00:04:52,020 --> 00:04:59,430
+I mean you know df7, you check your new data frame and what you get is this.
+
+64
+00:04:59,580 --> 00:05:04,190
+So your rows have become columns and your columns have become rows.
+
+65
+00:05:04,530 --> 00:05:13,320
+So spend a few seconds looking at this you know. What we can do now is you know we can use the same syntax.
+
+66
+00:05:13,550 --> 00:05:20,820
+DF7_t and then add a new column in there. So for the name of a column you will have
+
+67
+00:05:20,820 --> 00:05:23,260
+to pass an address
+
+68
+00:05:23,750 --> 00:05:27,850
+Let's say My address.
+
+69
+00:05:28,560 --> 00:05:37,370
+That would equal again to the list and you want the list to reflect this order. So City First.
+
+70
+00:05:37,500 --> 00:05:42,000
+Let's see My city. Country, My country.
+
+71
+00:05:45,040 --> 00:05:54,510
+And 10 for employees and 7 for ID. My shop for the shop name. My state.
+
+72
+00:05:58,790 --> 00:06:05,990
+And My continent. Execute thati. Df7_t.
+
+73
+00:06:06,090 --> 00:06:15,520
+If you look at this now you'll see that you get a new column in your data frame and now what
+
+74
+00:06:15,550 --> 00:06:16,800
+you do?
+
+75
+00:06:16,840 --> 00:06:29,690
+So to complete the trick is let me say df7=df_t.T..
+
+76
+00:06:29,970 --> 00:06:34,850
+So df7 now will have the new row added at the end.
+
+77
+00:06:35,070 --> 00:06:36,940
+So let me wrap this up.
+
+78
+00:06:36,990 --> 00:06:44,000
+Again what I did is I transposed the original data frame df7 and than I added a column there.
+
+79
+00:06:44,140 --> 00:06:50,550
+And if I transpose the data frame back again to its original position this column that I added will
+
+80
+00:06:50,550 --> 00:06:55,610
+be converted to a row and that does the trick.
+
+81
+00:06:55,620 --> 00:06:59,780
+Similarly you can modify or row if you like.
+
+82
+00:06:59,790 --> 00:07:07,110
+So in that case you don't point to my address but you'd pointed to an existing column with an address
+
+83
+00:07:07,110 --> 00:07:08,730
+with an existing address name.
+
+84
+00:07:08,910 --> 00:07:14,510
+For instance this one if I pass it here and execute that. Execute that
+
+85
+00:07:14,540 --> 00:07:16,180
+And that.
+
+86
+00:07:16,980 --> 00:07:23,730
+And you'll see that the values of this row with this address name have been updated now.
+
+87
+00:07:23,740 --> 00:07:29,570
+As you can see in here and that closes this lecture as well.
+
+88
+00:07:29,780 --> 00:07:31,050
+And yeah, I'll see you later.
+

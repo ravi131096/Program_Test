@@ -1,0 +1,112 @@
+1
+00:00:00,550 --> 00:00:03,850
+Alright now you know how to extract portion of a data frame.
+
+2
+00:00:03,930 --> 00:00:08,040
+But how about deleting columns or rows from a data frame.
+
+3
+00:00:08,640 --> 00:00:16,650
+Well for that you do want to use the df7.drop. So the Drop Method.
+
+4
+00:00:16,710 --> 00:00:19,690
+Note that this is also not an inplace operation.
+
+5
+00:00:19,770 --> 00:00:22,340
+So your df7 data frame will not be updated
+
+6
+00:00:22,380 --> 00:00:31,230
+with the deleted column. And yeah, let me delete the City column. You'd pass city for the column name and then 1.
+
+7
+00:00:31,790 --> 00:00:38,460
+So the 1 argument means that you are about to delete columns. That's how you tell Pandas or Python
+
+8
+00:00:38,610 --> 00:00:43,470
+what you're about to delete. When you delete throws you want to pass zero.
+
+9
+00:00:43,890 --> 00:00:49,810
+So yeah this is the on the fly data frame without the city column there.
+
+10
+00:00:49,920 --> 00:00:57,440
+So again df7 with City and drop.
+
+11
+00:00:57,960 --> 00:01:08,350
+Let me drop 332 Hill St zero. And yeah, Hill Street is not there.
+
+12
+00:01:09,810 --> 00:01:18,240
+And of course if you want to update your data frame with the changes you do that and then when you print out
+
+13
+00:01:18,840 --> 00:01:21,970
+your df7 data frame the Hill Street is not there.
+
+14
+00:01:22,140 --> 00:01:32,490
+Yeah if you want to drop columns or rows based on indexing you do a trick like df7 and then points
+
+15
+00:01:32,490 --> 00:01:33,930
+to index.
+
+16
+00:01:34,060 --> 00:01:35,010
+And than what do you want.
+
+17
+00:01:35,160 --> 00:01:37,120
+Well zero to three maybe.
+
+18
+00:01:37,590 --> 00:01:44,440
+So you are deleting rows. Execute that and you get the 3 rows only.
+
+19
+00:01:44,730 --> 00:01:52,500
+Similarly with columns. Columns and one in here.
+
+20
+00:01:53,210 --> 00:01:55,390
+So you get ID name and state.
+
+21
+00:01:55,500 --> 00:01:56,970
+The first three columns.
+
+22
+00:01:57,240 --> 00:02:05,190
+So if that confused you know df7.index what that gives you is a series with the names
+
+23
+00:02:05,190 --> 00:02:07,690
+or with the labels of your index column.
+
+24
+00:02:07,740 --> 00:02:15,610
+So all of these and similarly Columns gives you the names all of your columns.
+
+25
+00:02:16,140 --> 00:02:21,830
+So that's how you access the header of your data frame and the index column.
+
+26
+00:02:22,070 --> 00:02:25,970
+And yeah, that was about deleting columns and rows from the data frame.
+
+27
+00:02:26,040 --> 00:02:28,800
+If you have questions just feel free to ask them.
+
+28
+00:02:28,930 --> 00:02:30,200
+I'll talk to you to the next lecture.
+

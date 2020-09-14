@@ -1,0 +1,492 @@
+1
+00:00:00,510 --> 00:00:06,540
+Alright now that's you know how to get data in Python via Pandas and you know how to do that through
+
+2
+00:00:06,570 --> 00:00:14,310
+using different data sources as is so CSV, JSON, text files an Excel. And you want to understand
+
+3
+00:00:14,310 --> 00:00:21,660
+how and learn how to manipulate these data frames and by manipulation what I mean is deleting in
+
+4
+00:00:21,660 --> 00:00:29,370
+rows and columns from your data frame and adding new rows and columns and also modifying existing rows
+
+5
+00:00:29,370 --> 00:00:30,350
+and columns.
+
+6
+00:00:30,390 --> 00:00:34,350
+So that's what youre gonna learn throughout these lectures.
+
+7
+00:00:34,440 --> 00:00:40,980
+But first of all I'd like you to understand how data frames are indexed. With indexing
+
+8
+00:00:40,980 --> 00:00:45,910
+i mean you know we have this data frame here and this can be a big one.
+
+9
+00:00:45,930 --> 00:00:51,360
+So this happens to be a short one with only six rows but if you have big data frames with lots
+
+10
+00:00:51,360 --> 00:00:57,990
+of columns and rows then you may want to extract information out of the data frame and to extract
+
+11
+00:00:57,990 --> 00:01:02,650
+information you need to have like a coordinate system
+
+12
+00:01:02,720 --> 00:01:08,850
+in that data frame like an embedded coordinate system so that if you want to access let's say
+
+13
+00:01:09,720 --> 00:01:17,340
+from here and 15 to and then maybe this other portion.
+
+14
+00:01:17,340 --> 00:01:23,240
+So these two rows here, this portion here you want to know how to do that.
+
+15
+00:01:23,250 --> 00:01:28,070
+So that's what you're going to learn now how did our frames are indexed how you can slice them.
+
+16
+00:01:28,080 --> 00:01:32,780
+So let's try to extract that portion of the data frame.
+
+17
+00:01:33,630 --> 00:01:36,900
+Let me create some empty lines here.
+
+18
+00:01:36,910 --> 00:01:39,050
+I don't want to confuse you with that data frame.
+
+19
+00:01:39,090 --> 00:01:41,480
+So we're working on this one.
+
+20
+00:01:41,830 --> 00:01:48,540
+And then yeah, df7 and what you want to apply now there might be different ways to access that portion
+
+21
+00:01:48,540 --> 00:01:49,740
+of the data frame.
+
+22
+00:01:49,920 --> 00:01:53,910
+The first way is to use label based indexing.
+
+23
+00:01:53,910 --> 00:01:56,490
+The other way is to use position based indexing.
+
+24
+00:01:56,820 --> 00:02:01,660
+So your data frame has column labels and index labels.
+
+25
+00:02:01,820 --> 00:02:06,670
+So these 1 0 1 2 3 4 5 are index labels.
+
+26
+00:02:06,690 --> 00:02:08,660
+These are column labels.
+
+27
+00:02:08,870 --> 00:02:17,340
+Now these, the index label in our case it's a bit confusing because it's normally it can be text
+
+28
+00:02:17,690 --> 00:02:24,960
+such as let's say in our data frame the address is a unique column which you can use as an identifier.
+
+29
+00:02:25,290 --> 00:02:35,190
+So if you want you can set that as an index. Address, execute. And so you see that this is in bold.
+
+30
+00:02:35,190 --> 00:02:40,540
+So the first column is in bold meaning that this is the index column of your data frame.
+
+31
+00:02:40,890 --> 00:02:46,390
+So now you can use labels from your index column and labels from your header
+
+32
+00:02:46,440 --> 00:02:51,400
+your column names to access portions of your data frame.
+
+33
+00:02:51,600 --> 00:02:58,320
+Just be careful though be because with this operation that we just do here you know if you print
+
+34
+00:02:58,320 --> 00:03:05,140
+df7  now Df7. You'll see that you see you have the old index column in there.
+
+35
+00:03:05,190 --> 00:03:07,060
+So 0 1 2 3 5.
+
+36
+00:03:07,070 --> 00:03:15,270
+The reason to that is this set index method as many other methods in Pandas is not an in-place
+
+37
+00:03:15,360 --> 00:03:16,350
+operator.
+
+38
+00:03:16,830 --> 00:03:23,590
+Meaning that all this will do it will speed out an updated data frame, but it will not store that data
+
+39
+00:03:23,610 --> 00:03:25,450
+frame in your variable.
+
+40
+00:03:25,790 --> 00:03:28,650
+So the variable, the data frame remains the same.
+
+41
+00:03:28,650 --> 00:03:33,540
+It just prints out a new data frame on the fly just for printing purposes.
+
+42
+00:03:33,540 --> 00:03:41,280
+So what you want to do to store that is you create a variable which can be the same variable as this if you
+
+43
+00:03:41,290 --> 00:03:44,130
+don't If you just want to update your variable.
+
+44
+00:03:44,190 --> 00:03:47,700
+But it can also be another variable like df8.
+
+45
+00:03:47,910 --> 00:03:56,570
+I'll just want to update existing variable like that. That will not print out any output.
+
+46
+00:03:56,850 --> 00:04:00,150
+So you want to do that manually like this.
+
+47
+00:04:00,720 --> 00:04:03,620
+So now when you print the df7 you see that
+
+48
+00:04:03,730 --> 00:04:09,460
+df7 is updated with this address column as an index of the data frame.
+
+49
+00:04:09,510 --> 00:04:12,440
+So be careful with in-place operations.
+
+50
+00:04:12,600 --> 00:04:23,330
+You know you can see that df.set_index question mark to ask for help.
+
+51
+00:04:23,450 --> 00:04:31,570
+Sorry, it should be df7.set_index. And you can see that you have this inplace parameter there.
+
+52
+00:04:31,980 --> 00:04:34,660
+That is sat to False by default.
+
+53
+00:04:35,310 --> 00:04:43,830
+So which means you can also pass inplace after this and set it to True you will update the existing
+
+54
+00:04:43,830 --> 00:04:48,170
+data frame without the need to save the data frame to a new variable.
+
+55
+00:04:48,180 --> 00:04:55,170
+But I would recommend that you just get used to creating new variables when you apply methods
+
+56
+00:04:55,170 --> 00:05:05,240
+to your existing variables, existing data frames. And it should be good to go. Delete that and let's
+
+57
+00:05:05,250 --> 00:05:12,730
+get back to our original purpose now which was to access, to slice this portion of the free. I would first
+
+58
+00:05:12,750 --> 00:05:19,530
+do it using a label indexing. With the label indexing you want to use a lock in there. So the lock method.
+
+59
+00:05:20,100 --> 00:05:26,360
+And then you pass square brackets in there and then that gets two elements and the first element could
+
+60
+00:05:26,370 --> 00:05:30,360
+be a range of the index column.
+
+61
+00:05:30,360 --> 00:05:36,180
+So we're talking about labels, about strings so you have to pass you know 735 Dolores St
+
+62
+00:05:37,040 --> 00:05:41,510
+and than a range
+
+63
+00:05:41,540 --> 00:05:54,570
+so with a column there 332 Heel St. And from country to ID. Execute that.
+
+64
+00:05:54,570 --> 00:05:56,310
+And yeah this is our portion.
+
+65
+00:05:56,310 --> 00:06:02,710
+So when you use labels you're including the first label that your pass there and the last one as well.
+
+66
+00:06:02,940 --> 00:06:11,930
+So everything between those like here country and employees is included as well but ID also and of course
+
+67
+00:06:11,940 --> 00:06:21,640
+similarly almost similarly you can access you know new single cells from your data frame just like that.
+
+68
+00:06:21,670 --> 00:06:30,480
+So the intersection between this index label and this column name is USA which would be this one here.
+
+69
+00:06:30,480 --> 00:06:40,280
+If you want all of the USAs then you just pass everything there and you get everything here which
+
+70
+00:06:40,290 --> 00:06:45,840
+of course if you want you can convert it to a list.
+
+71
+00:06:46,050 --> 00:06:54,480
+So a simple list using the Python built in function which just List. And thats about label based indexing.
+
+72
+00:06:54,840 --> 00:07:01,950
+Now this is not the common way to access to extract data from the data frame. More common could be
+
+73
+00:07:01,940 --> 00:07:07,960
+to access the data base on indexing not based on labels.
+
+74
+00:07:08,050 --> 00:07:20,390
+Su to do that you do df7 and instead of loc you do iloc.
+
+75
+00:07:08,050 --> 00:07:20,390
+That again expects two items.
+
+76
+00:07:20,390 --> 00:07:25,490
+So the first would be the range of your indexes.
+
+77
+00:07:25,800 --> 00:07:34,420
+Actually let me print all the data frame here so that you can refer to that.
+
+78
+00:07:34,830 --> 00:07:41,230
+So let's me access from Dolores to 23rd Street.
+
+79
+00:07:41,360 --> 00:07:46,820
+That would be 1 to 3 I believe. Yeah.
+
+80
+00:07:47,580 --> 00:07:50,960
+And also from country to ID.
+
+81
+00:07:50,970 --> 00:07:55,730
+So again 1 two 3.
+
+82
+00:07:58,740 --> 00:08:00,960
+And yeah, you can see the difference now.
+
+83
+00:08:01,310 --> 00:08:08,070
+You know the ID wasn't included there and either was 23rd Street because this is as you do
+
+84
+00:08:08,060 --> 00:08:10,710
+with Lists this is Upper Bound exclusive.
+
+85
+00:08:10,730 --> 00:08:18,600
+So with Python List 3 is not included in the slice, but with labels the last item of the
+
+86
+00:08:18,600 --> 00:08:21,770
+range was included in the slice.
+
+87
+00:08:21,840 --> 00:08:25,010
+So in this case you want to pass 4 there and 4 there.
+
+88
+00:08:25,510 --> 00:08:27,560
+And that's how you get your portion.
+
+89
+00:08:27,760 --> 00:08:31,860
+And of course similarly you can do things like that.
+
+90
+00:08:32,000 --> 00:08:37,520
+So you get all the rows or only one of them.
+
+91
+00:08:39,300 --> 00:08:46,520
+So that would be a row with index 3 which is this one but only for columns Country, Employees
+
+92
+00:08:46,630 --> 00:08:47,180
+and ID.
+
+93
+00:08:47,180 --> 00:08:49,270
+So USA 10 and 4.
+
+94
+00:08:49,770 --> 00:08:50,650
+All right.
+
+95
+00:08:50,930 --> 00:08:52,670
+That is position based indexing.
+
+96
+00:08:52,860 --> 00:08:58,720
+Now we have one more very useful kind of indexing and that is combined indexing.
+
+97
+00:08:58,910 --> 00:09:06,020
+So in certain scenarios you might need to access a portion of rows without having to pass names for
+
+98
+00:09:06,020 --> 00:09:06,730
+the rows.
+
+99
+00:09:06,750 --> 00:09:13,340
+So you want to access rows based on indexing, based on their position but on the other hand you don't
+
+100
+00:09:13,350 --> 00:09:19,750
+want to access columns based on positions you want to access like sort of columns
+
+101
+00:09:19,750 --> 00:09:21,510
+which names you know about.
+
+102
+00:09:21,540 --> 00:09:29,290
+So you don't want to count the column and here comes in handy
+
+103
+00:09:29,660 --> 00:09:32,010
+the IX Method.
+
+104
+00:09:32,280 --> 00:09:37,860
+So that allows you to enter a combination of indexes and labels.
+
+105
+00:09:38,610 --> 00:09:46,800
+So that will return you the row with index 3 and the column with label name so we get Bens Shop
+
+106
+00:09:47,610 --> 00:09:51,270
+and you cannot do this neither with iloc nor with loc.
+
+107
+00:09:51,310 --> 00:09:53,350
+That's why IX exists there.
+
+108
+00:09:53,490 --> 00:10:00,790
+And of course you can put two positions if you like so name would be 0 1 2 3 4 you get the same outputs
+
+109
+00:10:00,820 --> 00:10:01,060
+.
+
+110
+00:10:01,250 --> 00:10:03,210
+Bens Shop.
+
+111
+00:10:03,200 --> 00:10:07,440
+Which brings us to the point that if you want you can always use IX.
+
+112
+00:10:07,430 --> 00:10:12,900
+Forget about iloc and loc but IX is not recommended
+
+113
+00:10:13,000 --> 00:10:14,710
+over iloc and loc.
+
+114
+00:10:14,790 --> 00:10:17,820
+So these are more explicit.
+
+115
+00:10:18,060 --> 00:10:19,780
+They will avoid errors some time.
+
+116
+00:10:19,780 --> 00:10:22,170
+So when you do position based indexing.
+
+117
+00:10:22,350 --> 00:10:30,180
+So I also suggest you use iloc and loc whenever you can and then switch to IX when you want to do
+
+118
+00:10:30,170 --> 00:10:33,610
+these kinds of combinations between labels and positions.
+
+119
+00:10:33,720 --> 00:10:38,210
+And yeah, that's what I wanted to teach you about data frame indexing and slicing.
+
+120
+00:10:38,550 --> 00:10:44,420
+And I'll talk to you in the next lecture where you'll be learning how to delete columns and rows from
+
+121
+00:10:44,420 --> 00:10:44,750
+the data
+
+122
+00:10:44,790 --> 00:10:45,340
+frame
+
+123
+00:10:45,380 --> 00:10:46,190
+See you there.
+

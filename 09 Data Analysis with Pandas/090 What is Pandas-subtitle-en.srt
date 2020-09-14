@@ -1,0 +1,304 @@
+1
+00:00:00,690 --> 00:00:09,260
+Hey welcome to this new section and in this section you'll learn how to use Pandas which is a very important
+
+2
+00:00:09,370 --> 00:00:12,880
+Python library and you really don't want to miss that.
+
+3
+00:00:13,380 --> 00:00:14,830
+So what is Pandas?
+
+4
+00:00:15,180 --> 00:00:23,690
+Well Pandas is a library providing data structures and data analysis tools within Python
+
+5
+00:00:23,690 --> 00:00:29,760
+Or if the word tools confuses you then you can say Pandas is a library providing data structures and data
+
+6
+00:00:29,790 --> 00:00:31,420
+analysis code.
+
+7
+00:00:31,470 --> 00:00:38,880
+So basically Pandas allows you to load data from different sources into Python and than use Python code
+
+8
+00:00:38,940 --> 00:00:47,120
+to analyze those data and produce results which can be in the form of tables, text and also visualization
+
+9
+00:00:47,120 --> 00:00:47,370
+.
+
+10
+00:00:47,370 --> 00:00:55,320
+With the help of visualization and libraries such as Bokeh which is covered later in of course
+
+11
+00:00:55,320 --> 00:00:55,840
+.
+
+12
+00:00:55,920 --> 00:01:02,400
+So for now we'll focus on data without visualizing them and Pandas is great for that.
+
+13
+00:01:02,400 --> 00:01:10,170
+So practically how do we use Pandas? Well, you learnt how to open text files using Python built in
+
+14
+00:01:10,290 --> 00:01:13,050
+file handling methods earlier in the course.
+
+15
+00:01:13,050 --> 00:01:16,820
+Now what we opened from text files was just plain text.
+
+16
+00:01:16,920 --> 00:01:22,450
+But what if you want to load text files with data constructed of rows and columns?
+
+17
+00:01:23,010 --> 00:01:27,750
+So things get a bit complicated but here is where Pandas comes into play.
+
+18
+00:01:27,750 --> 00:01:34,620
+So you can probably do that using built in Python methods that we have learned in the course but to
+
+19
+00:01:34,620 --> 00:01:41,880
+be more efficient and to be much more efficient you need to have a high level library such as Pandas which
+
+20
+00:01:41,880 --> 00:01:45,820
+is able to recognize such a data structure so automatically.
+
+21
+00:01:45,960 --> 00:01:53,550
+So I use Pandas for loading data from data mining activities such as web scrapping so you scrap
+
+22
+00:01:53,550 --> 00:01:59,190
+data from a website with Python and then store those data are in Pandas data frames.
+
+23
+00:01:59,370 --> 00:02:05,760
+So you use Pandas to provide data structures for you in Python. And I use Pandas for loading data from
+
+24
+00:02:05,760 --> 00:02:11,570
+Excel files and also use Pandas for analyzing those data instead of using Excel.
+
+25
+00:02:11,820 --> 00:02:17,160
+Excel can be good for analyzing a small table of data that that fits in your screen, in your computer
+
+26
+00:02:17,160 --> 00:02:20,660
+screen but for data larger than that
+
+27
+00:02:20,710 --> 00:02:23,430
+you really want to use code.
+
+28
+00:02:23,700 --> 00:02:31,110
+So you write Python code once and you reuse it with other data as well and you don't want to do
+
+29
+00:02:31,110 --> 00:02:38,100
+selections and dragging and many other cumbersome operations that you normally do in a graphical
+
+30
+00:02:38,100 --> 00:02:40,530
+based program such as Excel.
+
+31
+00:02:40,770 --> 00:02:44,510
+So code is the way to go if you want to be efficient with data.
+
+32
+00:02:44,810 --> 00:02:47,230
+And Python is great for that
+
+33
+00:02:47,330 --> 00:02:55,320
+with Pandas. So you really want to get a good hang of Pandas and you will learn that in this section and
+
+34
+00:02:55,320 --> 00:03:01,740
+also practice it with real world applications that we will be building as you progress through the course
+
+35
+00:03:01,740 --> 00:03:02,810
+.
+
+36
+00:03:02,820 --> 00:03:04,440
+Now that's enough with words.
+
+37
+00:03:04,450 --> 00:03:12,090
+Let's go ahead and install Pandas. You want to open the terminal and the process is straightforward.
+
+38
+00:03:12,150 --> 00:03:15,370
+You say: Pip install Pandas.
+
+39
+00:03:15,660 --> 00:03:23,430
+Now I mentioned that Pandas is a high level library and Pandas is based on Numpy which you can see
+
+40
+00:03:23,520 --> 00:03:24,710
+in here.
+
+41
+00:03:25,320 --> 00:03:33,240
+So Pandas is now trying to install Numpy because without Numpy you cannot use Pandas.
+
+42
+00:03:33,240 --> 00:03:40,030
+Numpy is a more low level library than Pandas. We will cover Numpy later on.
+
+43
+00:03:40,230 --> 00:03:44,970
+But I wanted you to know Pandas first because that is more easy to understand.
+
+44
+00:03:45,210 --> 00:03:52,140
+So once you know how to use Pandas, then you think about Numpy and Ill show you how Numpy is the base of
+
+45
+00:03:52,140 --> 00:03:52,880
+Pandas.
+
+46
+00:03:52,890 --> 00:03:55,710
+So let's not think about Numpy now.
+
+47
+00:03:55,790 --> 00:03:57,200
+Yeah, so this was successful.
+
+48
+00:03:57,330 --> 00:04:04,320
+But if for any reason it wasn't successful on your side and I know that in some windows distributions
+
+49
+00:04:04,620 --> 00:04:11,970
+you may get an error such as this one here. So it says: Unable to find this bat file.
+
+50
+00:04:12,000 --> 00:04:21,540
+And that happens to be because Pandas is trying to compile itself but it cannot find a compiler
+
+51
+00:04:21,630 --> 00:04:21,900
+.
+
+52
+00:04:22,120 --> 00:04:31,230
+So in that case the easiest solution that you can do is to use precompiled Python libraries which you can
+
+53
+00:04:31,260 --> 00:04:35,130
+find in this case in this website.
+
+54
+00:04:36,150 --> 00:04:39,050
+So they're provided by Chris Gholke.
+
+55
+00:04:39,320 --> 00:04:42,880
+Now you want to locate Numpy first.
+
+56
+00:04:42,990 --> 00:04:50,130
+So here is Numpy. You click that and that goes down here and then you want to pick up your version
+
+57
+00:04:50,130 --> 00:04:50,330
+.
+
+58
+00:04:50,340 --> 00:04:59,220
+So if you have Python 3.5 youd want to go for this cp35 and then you have 32 bits of windows and 64
+
+59
+00:04:59,220 --> 00:04:59,790
+.
+
+60
+00:04:59,790 --> 00:05:02,920
+So you want to pick your own bits.
+
+61
+00:05:03,010 --> 00:05:10,020
+So what you do is you download that that is whl file which is the same file that you install
+
+62
+00:05:10,020 --> 00:05:17,340
+with Pip but with Pip you download it and then you install it. In this case the download is being done manually
+
+63
+00:05:17,390 --> 00:05:20,430
+and then we point to this file with Pip again to install.
+
+64
+00:05:20,430 --> 00:05:21,970
+Ill show how to do that.
+
+65
+00:05:22,090 --> 00:05:30,450
+And once that file is downloaded successfully Ive put in here in my C drive C PP and then you want
+
+66
+00:05:30,450 --> 00:05:44,070
+to either CD to that directory and then use Pip install and then start typing in the name of that file.
+
+67
+00:05:44,160 --> 00:05:47,690
+Tab to get the complete file name.
+
+68
+00:05:48,000 --> 00:05:52,830
+Now you should pres enter and that will install Numpy for you.
+
+69
+00:05:52,950 --> 00:06:01,540
+Once you are done with Numpy, than you go ahead and get Pandas as well. Pandas. These are the distributions
+
+70
+00:06:01,540 --> 00:06:01,560
+.
+
+71
+00:06:01,560 --> 00:06:08,330
+Again you get 3.5 if you have the 3.5 version for Python and the Windows version as well.
+
+72
+00:06:08,340 --> 00:06:11,730
+And you repeat the same process.
+
+73
+00:06:12,300 --> 00:06:24,830
+I hope that is clear. Once you install Pandas then you can simply go ahead import it.
+
+74
+00:06:24,830 --> 00:06:26,760
+There is no error and you are good to go.
+
+75
+00:06:27,000 --> 00:06:31,170
+So that was about an introduction to Pandas and how to install it.
+
+76
+00:06:31,710 --> 00:06:36,600
+Let's go ahead and dive into some code now in the next lectures. See you.
+
